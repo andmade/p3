@@ -1,0 +1,109 @@
+body {
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	background-color: #03141C;
+	color: #fff;
+	font-size:2vw;
+}
+h1{
+	font-family: 'Segoe UI', sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size:5vw;
+	margin-bottom: 0px;
+}
+
+header h2 {
+	font-family: "Arial", sans-serif;
+	font-size: 2vw;
+	font-weight: bold;
+	margin-left: 2vw;
+	margin-top: -10px;
+	font-variant: small-caps;
+	letter-spacing: 3px;
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 90%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translate3d(-90%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/* .m-scene {
+	.scene_element {
+		-webkit-animation-duration: 10s;
+		        animation-duration: 10s;
+		-webkit-transition-timing-function: ease-in;
+		        transition-timing-function: ease-in;
+		-webkit-animation-fill-mode: both;
+		        animation-fill-mode: both;
+	}
+
+	* An element that fades in
+	.scene_element--fadein {
+		-webkit-animation-name: fadeIn;
+		        animation-name: fadeIn;
+	}
+
+	* An element that fades in and slides up
+	.scene_element--fadeinup {
+		-webkit-animation-name: fadeInUp;
+		        animation-name: fadeInUp;
+	}
+
+	* An element that fades in and slides from the right
+	.scene_element--fadeinright {
+		-webkit-animation-name: fadeInRight;
+		        animation-name: fadeInRight;
+	}
+} */
+
+.m-scene {
+  /** An element that fades in */
+  /** An element that fades in and slides up */
+  /** An element that fades in and slides from the right */
+}
+.m-scene .scene_element {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.m-scene .scene_element--fadein {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.m-scene .scene_element--fadeinup {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.m-scene .scene_element--fadeinright {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}

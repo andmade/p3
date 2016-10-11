@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/usergen', function () {
-    return "<h1>Random userrrrrrrs</h1>";
-});
-Route::get('/gladosipsum', function () {
-    return "<h1>Oh, it's you.</h1>";
-});
+Route::get('/', function () {return view('landing');});
+Route::get('usergen', 'UserController');
+Route::get('gladosipsum', 'IpsumController@index')->name('ipsum.index');

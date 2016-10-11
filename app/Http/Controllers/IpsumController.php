@@ -8,7 +8,12 @@ use P3\Http\Requests;
 
 class IpsumController extends Controller
 {
-    public function __invoke() {
-    	return "<h1>Oh, it's you.</h1>";
+
+    // public function __invoke() {
+    // 	return view('ipsum.index');
+    // }
+
+    public function index() {
+    	return view('ipsum.index');
     }
 }
