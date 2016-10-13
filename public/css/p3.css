@@ -5,22 +5,33 @@ body {
 	color: #fff;
 	font-size:2vw;
 }
+
 h1{
 	font-family: 'Segoe UI', sans-serif;
 	font-weight: bold;
 	font-style: italic;
 	font-size:5vw;
 	margin-bottom: 0px;
+	letter-spacing: 0.5vw;
 }
 
 header h2 {
-	font-family: "Arial", sans-serif;
+	font-family: "NTR", sans-serif;
 	font-size: 2vw;
-	font-weight: bold;
+	font-weight: 100;
 	margin-left: 2vw;
-	margin-top: -10px;
+	margin-top: -3vh;
 	font-variant: small-caps;
-	letter-spacing: 3px;
+	letter-spacing: 0.5vw;
+}
+
+#gladosHeader h1 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: bold;
+	letter-spacing: 0;
+}
+.landing-page-wrapper {
+	text-align: center;
 }
 @-webkit-keyframes fadeIn {
 	0% {

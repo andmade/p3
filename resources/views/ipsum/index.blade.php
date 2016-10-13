@@ -15,10 +15,13 @@
         <script src="/js/vendor/foundation.min.js" type="text/javascript"></script>
     </head>
     <body>
+
+        <header id="gladosHeader" class="m-scene">
+                <h1 class="scene_element scene_element--fadeinup">Glados Ipsum</h1>
+        </header>
+
         <div id="glados-wrapper" class="content-pushleft m-scene">
-            <header class="scene_element scene_element--fadeinup">
-                <h1>Glados Ipsum</h1>
-            </header>
+            
             <section class="scene_element scene_element--fadeinright" style="background-color: #000">
                 <p>Oh, it's you.</p>
             </section>

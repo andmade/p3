@@ -6,7 +6,7 @@
         <title>aperture webdev center</title>
         
         <!--CSS-->
-        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700,700i|Dosis:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700,700i|Dosis:200,400,700|NTR" rel="stylesheet">
         <link rel="stylesheet" href="/css/foundation.min.css" />
         <link rel="stylesheet" href="/css/p3.css">
         
@@ -29,7 +29,10 @@
         </header>
         <div class="landing-page-wrapper m-scene">
             <div class="row expanded medium-unstack scene_element scene_element--fadeinup">
-                <div class="columns section"><a href="#glados-wrapper">GLaDOS Ipsum Generator</a></div>
+                <div class="columns section">
+                    <img src="/img/glados.png" width="200px"/>
+                    <a href="/gladosipsum">GLaDOS Ipsum Generator</a>
+                </div>
                 <div class="columns section">Test Subject Extended Relaxation Center</div>
             </div>
         </div>
