@@ -13,7 +13,16 @@ class IpsumController extends Controller
     // 	return view('ipsum.index');
     // }
 
+    
+
     public function index() {
-    	return view('ipsum.index');
+    	$generatedIpsum = $this->getIpsum(5);
+    	return view('ipsum.index')->with('generatedIpsum', $generatedIpsum);
+    }
+
+    public function getIpsum($numParagraphs) {
+    	$lipsum = new \joshtronic\LoremIpsum();
+    	return $lipsum->sentences($numParagraphs);
+
     }
 }

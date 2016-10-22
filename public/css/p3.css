@@ -97,7 +97,7 @@ header h2 {
   /** An element that fades in */
   /** An element that fades in and slides up */
   /** An element that fades in and slides from the right */
-}
+}/* 
 .m-scene .scene_element {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
@@ -118,3 +118,4 @@ header h2 {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
+ */
