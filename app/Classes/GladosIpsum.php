@@ -29,6 +29,34 @@ class GladosIpsum extends LoremIpsum
 			"this is not good", "you're on your own", "nice job breaking it, hero"
 		);
 
+    public function words($count = 1, $tags = false, $array = false)
+    {
+        $words      = array();
+        $word_count = 0;
+
+        // Shuffles and appends the word list to compensate for count
+        // arguments that exceed the size of our vocabulary list
+        while ($word_count < $count) {
+            $shuffle = true;
+
+            while ($shuffle) {
+                $this->reshuffle();
+
+                // Checks that the last word of the list and the first word of
+                // the list that's about to be appended are not the same
+                if (!$word_count || $words[$word_count - 1] != $this->words[0]) {
+                    $words      = array_merge($words, $this->words);
+                    $word_count = count($words);
+                    $shuffle    = false;
+                }
+            }
+        }
+
+        $words = array_slice($words, 0, $count);
+
+        return $this->createOutput($words, $tags, $array);
+    }
+
 	private function reshuffle()
     {
         if ($this->firstWords) {

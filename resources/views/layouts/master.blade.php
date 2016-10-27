@@ -17,7 +17,7 @@
 	<body>
 		<header id="mainHeader">
 			<div class="media-object">
-				<div class="media-object-section align-self-middle">
+				<div class="media-object-section align-self-bottom">
 					<a href="/"><img src="/img/aperture_logo.png" alt="Website logo, in the shape of a camera lens"/></a>
 				</div>
 				<div class="media-object-section main-section">
@@ -26,8 +26,8 @@
 					<h2 id="tagline">We get the science done, so you can do the testing</h2>
 				</div>
 				<nav class="top-bar-right" >
-					<ul class="dropdown menu" data-dropdown-menu>
-						<li class="is-dropdown-submenu-parent">
+					<ul class="dropdown menu no-js" data-dropdown-menu>
+						<li class="is-dropdown-submenu-parent no-js">
 							<a href="#">Menu</a>
 							<ul class="menu">
 								<li><a href="/">Home</a></li>

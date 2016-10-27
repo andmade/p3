@@ -6,7 +6,7 @@
 	<form method='POST' action='/usergen'>
 		{{ csrf_field() }}
 		<div class="row expanded">
-			<div class="columns small-12 medium-8 large-5">
+			<div class="columns small-12 medium-8 large-6">
 				
 				{{-- Input for number of users / Prefill last input value --}}
 				<div class="input-group">
