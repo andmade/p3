@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section("content")
 <h2 class="page-title">Test Subject Generator</h2>
-<section>
-	
+
+<div>	
 	<form method='POST' action='/usergen'>
 		{{ csrf_field() }}
 		<div class="row expanded">
@@ -35,21 +35,22 @@
 			</div>
 		</div>
 	</form>
-	
-	{{-- If this is a redirect from a valid submission, display the generated data --}}
-	@if (session('users'))
-	<?php
-		$users = Session::get("users");
-		$json = Session::get("json")
-	?>
-	
-	
-	<a href={{ $json }} class="button">View JSON</a>
+</div>
+
+{{-- If this is a redirect from a valid submission, display the generated data --}}
+@if (session('users'))
+<?php
+	$users = Session::get("users");
+	$json = Session::get("json");
+?>
+
+<div>
+	<a id="jsonButton" href={{ $json }} class="button">View JSON</a>
 	<div class="user-box-wrapper row expanded small-up-1 medium-up-2 large-up-3">
 		@foreach($users as $user=>$properties)
 		<div class="user-box media-object column">
 			<div class="media-object-section">
-				@if (isset($properties["picture"])) <img class="user-picture" src={{ $properties["picture"]}} /> @endif
+				@if (isset($properties["picture"])) <img class="user-picture" alt="User photo" src={{ $properties["picture"]}} /> @endif
 			</div>
 			<div class="media-object-section main-section">
 				<p class="user-realname">{{$user}} @if (isset($properties["username"]))<span class="user-username"> {{ $properties["username"] or "" }}</span>@endif</p>
@@ -60,6 +61,7 @@
 		</div>
 		@endforeach
 	</div>
-	@endif
-</section>
+</div>
+@endif
+
 @stop

@@ -54,7 +54,7 @@ header img {
 #tagline {
 	font-weight: 100;
 	font-size: 2.5vmin;
-	margin-top: -3.5vmin;
+	margin-top: -3vmin;
 	font-style: italic;
 }
 
@@ -68,6 +68,7 @@ label {
 
 .button {
 	background-color: #ee7f1b;
+	margin-left: 30px;
 }
 
 .user-box *{
@@ -91,13 +92,24 @@ label {
 .user-email, .user-joindate, .user-bio {
 	font-size: 0.8rem;
 }
-#gladosHeader h1 {
-	font-family: 'Cabin', sans-serif;
-	font-weight: bold;
-	letter-spacing: 0;
+
+#ipsumWrapper {
+	margin: 0 10vw;
 }
-.landing-page-wrapper {
+.landing-page-wrapper h2 {
 	text-align: center;
+}
+
+.landing-page-wrapper .columns {
+	margin-top: 10vmax;
+}
+
+.landing-page-wrapper p {
+	background-color: rgba(238,127,27,0.8) !important;
+	padding: 1vw;
+	margin: 1vw;
+	border-radius: 10px;
+
 }
 
 footer {

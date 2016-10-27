@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>@yield("title", "andmade | p3")</title>
 		<!--CSS-->
-		<link href="https://fonts.googleapis.com/css?family=Cabin:400,700,700i|Dosis:200,400,700|NTR" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cabin:400,700,700i%7CDosis:200,400,700%7CNTR" rel="stylesheet">
 		<link rel="stylesheet" href="/css/foundation.min.css" />
 		<link rel="stylesheet" href="/css/p3.css">
 		
@@ -18,9 +18,9 @@
 		<header id="mainHeader">
 			<div class="media-object">
 				<div class="media-object-section align-self-middle">
-					<img src="/img/aperture_logo.png" />
+					<a href="/"><img src="/img/aperture_logo.png" alt="Website logo, in the shape of a camera lens"/></a>
 				</div>
-				<div class="media-object-section main-section"">
+				<div class="media-object-section main-section">
 					<h1>APERTURE</h1>
 					<h2 id="subtitle">webdev enrichment center</h2>
 					<h2 id="tagline">We get the science done, so you can do the testing</h2>
@@ -37,16 +37,17 @@
 						</li>
 					</ul>
 				</nav>
-			</header>
-			
-			@yield("content")
-			
-			<footer>
-				<p>&copy; andmade {{ date('Y') }}</p>
-			</footer>
-			<script>
-			$(document).foundation();
-			</script>
-			@yield("body")
-		</body>
-	</html>
+			</div>
+		</header>
+		
+		@yield("content")
+		
+		<footer>
+			<p>&copy; andmade {{ date('Y') }}</p>
+		</footer>
+		<script>
+		$(document).foundation();
+		</script>
+		@yield("body")
+	</body>
+</html>

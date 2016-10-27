@@ -63,8 +63,8 @@ class UserController extends Controller
 		*/
 		$encoder = new JsonEncoder();
 		$encoder->setPrettyPrinting(true);
-		$encoder->encodeFile($users,"/users.json");
-		$url = asset('/users.json');
+		$encoder->encodeFile($users,"users.json");
+		$url = asset("users.json");
 		return $url;
 	}
 }

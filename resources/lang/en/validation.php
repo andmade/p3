@@ -113,5 +113,7 @@ return [
     */
 
     'attributes' => [
-        'numUsers' => 'number of users'],
+        'numUsers' => 'number of users',
+        'numParagraphs' => 'number of paragraphs'
+        ]
 ];

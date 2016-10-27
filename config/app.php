@@ -180,6 +180,8 @@ return [
         
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        P3\Providers\GladosIpsumProvider::class,
+
     ],
 
     /*
