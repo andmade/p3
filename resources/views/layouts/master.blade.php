@@ -15,13 +15,38 @@
 		@yield("head")
 	</head>
 	<body>
-		
-		@yield("content")
-
-		<footer>
-            <p>&copy; andmade {{ date('Y') }}</p>
-        </footer>
-
-         @yield('body')
-	</body>
-</html>
+		<header id="mainHeader">
+			<div class="media-object">
+				<div class="media-object-section align-self-middle">
+					<img src="/img/aperture_logo.png" />
+				</div>
+				<div class="media-object-section main-section"">
+					<h1>APERTURE</h1>
+					<h2 id="subtitle">webdev enrichment center</h2>
+					<h2 id="tagline">We get the science done, so you can do the testing</h2>
+				</div>
+				<nav class="top-bar-right" >
+					<ul class="dropdown menu" data-dropdown-menu>
+						<li class="is-dropdown-submenu-parent">
+							<a href="#">Menu</a>
+							<ul class="menu">
+								<li><a href="/">Home</a></li>
+								<li><a href="/gladosipsum">GLaDOS Ipsum</a></li>
+								<li><a href="/usergen">Test Subject Gen</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			
+			@yield("content")
+			
+			<footer>
+				<p>&copy; andmade {{ date('Y') }}</p>
+			</footer>
+			<script>
+			$(document).foundation();
+			</script>
+			@yield("body")
+		</body>
+	</html>
