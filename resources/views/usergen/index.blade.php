@@ -44,7 +44,7 @@
 	?>
 	
 	
-	<a href={{ $json }} class="button">View JSON</a>
+	<a href={{ $json }} class="button" download>Download JSON</a>
 	<div class="user-box-wrapper row expanded small-up-1 medium-up-2 large-up-3">
 		@foreach($users as $user=>$properties)
 		<div class="user-box media-object column">
