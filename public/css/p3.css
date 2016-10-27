@@ -3,7 +3,8 @@ body {
 	font-weight: bold;
 	background-color: #03141C;
 	color: #fff;
-	font-size:2vw;
+	font-size:1vw;
+	margin: 0 1vw;
 }
 
 h1{

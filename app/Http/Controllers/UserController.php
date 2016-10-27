@@ -5,20 +5,38 @@ use P3\Http\Requests;
 class UserController extends Controller
 {
 	public function index() {
-			$faker = \Faker\Factory::create();
-			
-		return view('usergen.index')->with("randomNames");
+		return view('usergen.index');
 	}
 	public function generate(Request $request) {
-		$numNames = $request->input('numNames');
-		$faker = \Faker\Factory::create();
-		$randomNames = [];
-		for ($i=0; $i < $numNames; $i++) {
-			$randomNames[] = $faker->name;
-		}
-			
-		// return view('usergen.index')->with("randomNames", $randomNames);
-		return redirect("usergen")->with("randomNames", $randomNames);
+		// Validate
+		$this->validate($request, ['numUsers' => 'required|numeric|max:64',]);
+
 		
+		// Get the numer of users requested and send to createUser function
+		$numUsers = $request->input('numUsers');
+
+		$users = $this->createUsers($numUsers);
+		// Redirect back to form, including the array of generated users
+				return redirect("usergen")->with("users", $users);
+	}
+	protected function createUsers($numUsers) {
+		$faker = \Faker\Factory::create();
+		
+		// Create the array of generated users, in the form of Name -> arrayOfOtherUserAttributes
+		$generatedUsers = [];
+		for ($i=0; $i < $numUsers; $i++) {
+			$currentUser = $faker->name;
+			$generatedUsers[$currentUser] = [];
+		}
+
+		// Populate the attributes
+		foreach ($generatedUsers as $user=>$properties) {
+			$generatedUsers[$user]["email"] = $faker->email;
+			$generatedUsers[$user]["picture"] = "/img/testsubject0".mt_rand(0,4).".png";
+			$generatedUsers[$user]["joinDate"] = $faker->date($format = 'M-d-Y', $max = 'now');
+			$generatedUsers[$user]["userName"] = $faker->userName;
+			$generatedUsers[$user]["bio"] = $faker->text($maxNbChars = 200) ;
+		}
+		return $generatedUsers;
 	}
 }
