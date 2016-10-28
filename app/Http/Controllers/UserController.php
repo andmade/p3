@@ -35,9 +35,9 @@ class UserController extends Controller
 	}
 	protected function createUsers($numUsers, $setEmail, $setPicture, $setJoinDate, $setUsername, $setBio) {
 		$faker = \Faker\Factory::create();
-		
-		// Create the array of generated users, in the form of Name -> arrayOfOtherUserProperties
-		
+		$lipsum = new \P3\Classes\GladosIpsum();
+
+		// Create the array of generated users, in the form of Name -> arrayOfOtherUserProperties		
 		$generatedUsers = [];
 		for ($i=0; $i < $numUsers; $i++) {
 			$currentUser = $faker->name;
@@ -50,7 +50,7 @@ class UserController extends Controller
 			if ($setPicture) {$generatedUsers[$user]["picture"] = "/img/testsubject0".mt_rand(1,4).".png";}
 			if ($setJoinDate) {$generatedUsers[$user]["joinDate"] = $faker->date($format = 'M-d-Y', $max = 'now');}
 			if ($setUsername) {$generatedUsers[$user]["username"] = "@".$faker->userName;}
-			if ($setBio) {$generatedUsers[$user]["bio"] = $faker->text($maxNbChars = 140) ;}
+			if ($setBio) {$generatedUsers[$user]["bio"] = $lipsum->words(10) ;}
 		}
 
 		//Return the users and any properties
