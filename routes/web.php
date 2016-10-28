@@ -16,5 +16,5 @@ Route::get('/', function () {return view('landing');});
 Route::get('usergen', 'UserController@index');
 Route::post('usergen', 'UserController@generate');
 
-Route::get('gladosipsum', 'IpsumController@index')->name('ipsum.index');
-Route::post('gladosipsum', 'IpsumController@generate')->name('ipsum.index');
+Route::get('gladosipsum', 'IpsumController@index');
+Route::post('gladosipsum', 'IpsumController@generate');

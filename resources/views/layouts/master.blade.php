@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>@yield("title", "andmade | p3")</title>
 		<!--CSS-->
-		<link href="https://fonts.googleapis.com/css?family=Cabin:400,700,700i%7CDosis:200,400,700%7CNTR" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Dosis:200,400,700%7CNTR" rel="stylesheet">
 		<link rel="stylesheet" href="/css/foundation.min.css" />
 		<link rel="stylesheet" href="/css/p3.css">
 		

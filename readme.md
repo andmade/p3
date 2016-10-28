@@ -3,6 +3,7 @@
 #Description
 This project is a collection of two tools to aid web development - an ipsum generator and an user generator. It is based off the videogame series "Portal."
 
+
 #Live URL
 <http://p3.andmade.me>
 
@@ -11,6 +12,7 @@ This project is a collection of two tools to aid web development - an ipsum gene
 
 #Resources
 + **Foundation Framework** - <http://foundation.zurb.com/>
++ **Google Fonts: Dosis and NTR** - <https://fonts.google.com/>
 + **The UnOfficial Portal Wiki: GLaDOS Voice Lines** - <http://theportalwiki.com/wiki/GLaDOS_voice_lines>
 + **webmozart/json Package** - <https://github.com/webmozart/json> (Used to encode data to json)
 + **joshtronic/php-loremipsum Package** - <https://github.com/joshtronic/php-loremipsum> (Used to help create GLaDOS ipsum)
